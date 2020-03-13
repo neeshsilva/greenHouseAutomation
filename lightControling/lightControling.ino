@@ -1,26 +1,66 @@
+/**
+
+   this set to work
+
+
+*/
+
+#include <PID_v1.h>
+
 const int interiorLdr0 = A0;
 
+const int interiorLightControler = 13;
 
+//***********************************************/
+double Setpoint , Input, Output;
 
-const int interiorLightControler = 2;
+double aggKp = 4, aggKi = 0.2, aggKd = 1;
+double consKp = 1, consKi = 0.05, consKd = 0.25;
+//**********************************************/
+
+PID myPID(&Input, &Output, &Setpoint, consKp, consKi, consKd, DIRECT);
 
 void pidLigthController();
 
 void setup() {
-  // put your setup code here, to run once:
-  pinMode(2, OUTPUT);
+
   Serial.begin(9600);
-  Serial.println("Well Come");
-  delay(1000);
+  Input = analogRead(interiorLdr0);
+  Setpoint = 100;
+  myPID.SetMode(AUTOMATIC);
+
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
-  Serial.println(analogRead(interiorLdr0));
-  delay(1000);
+  Input = analogRead(interiorLdr0);
+  //  pidLigthController();
+  //  delay(1000);
+
+  double gap = abs(Setpoint - Input);
+
+  if (gap < 10) {
+
+  } else if (gap > 10) {
+
+  } else {
+
+  }
+
 }
 
-void pidLigthController(){
-  
+void pidLigthController() {
+
+  double gap = abs(Setpoint - Input);
+
+  if (gap < 10) {
+    myPID.SetTunings(consKp, consKi, consKd);
+  } else {
+    myPID.SetTunings(aggKp, aggKi, aggKd);
+  }
+
+  myPID.Compute();
+  Serial.println(Output);
+  analogWrite(interiorLightControler, 255 - Output);
+
 }
