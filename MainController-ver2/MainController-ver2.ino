@@ -170,7 +170,7 @@ void loop() {
               myLcdKeypad->print("Set Temperature");
               myLcdKeypad->setCursor(0, 1);
               myLcdKeypad->print(tempTemperatureValue);
-              
+
               break;
             }
           case setTemperatuer: {
@@ -182,7 +182,7 @@ void loop() {
               myLcdKeypad->print("Set Humidity");
               myLcdKeypad->setCursor(0, 1);
               myLcdKeypad->print(tempHumidityValue);
-              
+
               break;
             }
           case setHumidity: {
@@ -194,7 +194,7 @@ void loop() {
               myLcdKeypad->print("Set Lighting val");
               myLcdKeypad->setCursor(0, 1);
               myLcdKeypad->print(tempLightIntensityValue);
-              
+
               break;
             }
         }
@@ -214,7 +214,7 @@ void loop() {
               myLcdKeypad->print("Set Humidity");
               myLcdKeypad->setCursor(0, 1);
               myLcdKeypad->print(tempHumidityValue);
-              
+
               break;
             }
           case setTemperatuer: {
@@ -226,7 +226,7 @@ void loop() {
               myLcdKeypad->print("Set Lighting val");
               myLcdKeypad->setCursor(0, 1);
               myLcdKeypad->print(tempLightIntensityValue);
-              
+
               break;
             }
           case setHumidity: {
@@ -238,7 +238,7 @@ void loop() {
               myLcdKeypad->print("Set Temperature");
               myLcdKeypad->setCursor(0, 1);
               myLcdKeypad->print(tempTemperatureValue);
-              
+
               break;
             }
         }
@@ -256,7 +256,7 @@ void loop() {
               myLcdKeypad->print("Set Lighting val");
               myLcdKeypad->setCursor(0, 1);
               myLcdKeypad->print(tempLightIntensityValue);
-              
+
               break;
             }
           case setTemperatuer: {
@@ -267,7 +267,7 @@ void loop() {
               myLcdKeypad->print("Set Temperature");
               myLcdKeypad->setCursor(0, 1);
               myLcdKeypad->print(tempTemperatureValue);
-              
+
               break;
             }
           case setHumidity: {
@@ -278,7 +278,7 @@ void loop() {
               myLcdKeypad->print("Set Humidity");
               myLcdKeypad->setCursor(0, 1);
               myLcdKeypad->print(tempHumidityValue);
-              
+
               break;
             }
         }
@@ -295,7 +295,7 @@ void loop() {
               myLcdKeypad->print("Set Lighting val");
               myLcdKeypad->setCursor(0, 1);
               myLcdKeypad->print(tempLightIntensityValue);
-              
+
               break;
             }
           case setTemperatuer: {
@@ -306,7 +306,7 @@ void loop() {
               myLcdKeypad->print("Set Temperature");
               myLcdKeypad->setCursor(0, 1);
               myLcdKeypad->print(tempTemperatureValue);
-              
+
               break;
             }
           case setHumidity: {
@@ -317,63 +317,12 @@ void loop() {
               myLcdKeypad->print("Set Humidity");
               myLcdKeypad->setCursor(0, 1);
               myLcdKeypad->print(tempHumidityValue);
-              
+
               break;
             }
         }
         break;
       }
-    default: {
-        break;
-      }
-
   }
-  
+
 }
-//int getPressedKey() {
-//
-//  boolean last_press = LOW;
-//
-//  if (myLcdKeypad->isUpKey()) {
-//    delay(50);
-//    if (myLcdKeypad->isUpKey()) {
-//      return upMode;
-//    } else {
-//      return noKey;
-//    }
-//
-//  } else if (myLcdKeypad->isDownKey()) {
-//    delay(50);
-//    if (myLcdKeypad->isDownKey()) {
-//      return downMode;
-//    } else {
-//      return noKey;
-//    }
-//  } else if (myLcdKeypad->isSelectKey()) {
-//    delay(50);
-//    if (myLcdKeypad->isSelectKey()) {
-//      return selectMode;
-//    } else {
-//      return noKey;
-//    }
-//  } else if (myLcdKeypad->isLeftKey()) {
-//    delay(50);
-//    if (myLcdKeypad->isLeftKey()) {
-//      return leftMode;
-//    } else {
-//      return noKey;
-//    }
-//  } else if (myLcdKeypad->isRightKey()) {
-//    delay(50);
-//    if (myLcdKeypad->isRightKey()) {
-//      return rightMode;
-//    } else {
-//      return noKey;
-//    }
-//  } else {
-//    return noKey;
-//  }
-//
-//
-//
-//}
